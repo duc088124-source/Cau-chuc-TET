@@ -2,67 +2,119 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 <title>Câu Chúc Tết</title>
 
 <style>
 body{
-  font-family: "Times New Roman", serif;
-  text-align:center;
-  padding:40px;
-  background: linear-gradient(135deg,#ffe9b3,#ffd6d6,#fff6cc);
-  overflow:hidden;
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    font-family: "Times New Roman", serif;
+
+    /* nền hoa lá nhẹ nhàng */
+    background:
+        radial-gradient(circle at 20% 20%, #ffd6d6 0%, transparent 40%),
+        radial-gradient(circle at 80% 30%, #ffe9a8 0%, transparent 40%),
+        radial-gradient(circle at 30% 80%, #d6f5d6 0%, transparent 40%),
+        linear-gradient(135deg,#fff5e6,#ffe0e0,#fff0cc);
 }
 
-/* hoa bay */
-.flower{
-  position:fixed;
-  top:-20px;
-  font-size:22px;
-  animation:fall linear infinite;
-}
-
-@keyframes fall{
-  to{
-    transform:translateY(110vh);
-  }
+.box{
+    background:rgba(255,255,255,0.9);
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 0 30px rgba(0,0,0,0.15);
+    max-width:700px;
 }
 
 h1{
-  color:#b30000;
-  font-size:34px;
-  margin-bottom:30px;
+    color:#b30000;
+    font-size:40px;
+    margin-bottom:10px;
 }
 
-#message{
-  font-size:26px;
-  color:#7a0000;
-  margin:30px 0;
-  min-height:60px;
-  font-weight:bold;
+p.sub{
+    font-size:20px;
+    margin-bottom:30px;
 }
 
 button{
-  background:#c40000;
-  color:white;
-  border:none;
-  padding:14px 28px;
-  font-size:20px;
-  border-radius:12px;
-  cursor:pointer;
+    padding:15px 40px;
+    font-size:18px;
+    background:#cc0000;
+    color:white;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
 }
 
 button:hover{
-  background:#a00000;
+    background:#990000;
+}
+
+#wish{
+    margin-top:30px;
+    font-size:22px;
+    color:#333;
+    min-height:60px;
 }
 </style>
 </head>
 
+
 <body>
 
-<h1>🌸 Chúc Mừng Năm Mới 🌸</h1>
+<div class="box">
 
-<div id="message">Bấm nút để nhận câu chúc đầu năm</div>
+    <h1>🌸 Chúc Mừng Năm Mới 🌸</h1>
+    <p class="sub">Bấm nút để nhận câu chúc đầu xuân</p>
 
-<
+    <button onclick="randomWish()">Nhận câu chúc</button>
+
+    <p id="wish"></p>
+
+</div>
+
+
+
+<script>
+
+const wishes = [
+
+"Chúc năm mới an khang thịnh vượng, vạn sự như ý.",
+"Gia đình hòa thuận, trên dưới thuận hòa, ấm êm hạnh phúc.",
+"Sức khỏe dồi dào, tinh thần minh mẫn, sống lâu trăm tuổi.",
+"Tài lộc hanh thông, tiền vào như nước, của đầy nhà kho.",
+"Công danh rộng mở, sự nghiệp thăng tiến, thành đạt vẻ vang.",
+"Xuân sang phúc đến, lộc đến đầy sân.",
+"Bình an mỗi ngày, vui vẻ mỗi tháng, may mắn cả năm.",
+"Phúc như Đông Hải, thọ tỷ Nam Sơn.",
+"Buôn may bán đắt, khách vào tấp nập.",
+"Gia đạo yên vui, con cháu hiếu thảo, sum vầy ấm cúng.",
+"Mọi điều tốt lành, tai ương tiêu tán.",
+"Tâm an trí sáng, việc gì cũng thành.",
+"Nhà nhà sung túc, người người hân hoan.",
+"Đầu năm gặp quý nhân, quanh năm gặp điều lành.",
+"Phúc lộc đầy tay, tiền tài đầy túi.",
+"Một năm mưa thuận gió hòa, mùa màng bội thu.",
+"Tiếng cười rộn rã, niềm vui ngập tràn.",
+"Đi xa bình an, trở về thuận lợi.",
+"Vạn sự cát tường, trăm điều như ý.",
+"Một mùa xuân mới tràn đầy hy vọng và hạnh phúc."
+
+];
+
+
+function randomWish(){
+    const w = wishes[Math.floor(Math.random()*wishes.length)];
+    document.getElementById("wish").innerText = w;
+}
+
+</script>
+
+</body>
+</html>
