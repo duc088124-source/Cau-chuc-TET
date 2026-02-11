@@ -2,87 +2,67 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8" />
-<title>Chúc Tết May Mắn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Câu Chúc Tết</title>
 
 <style>
 body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(135deg,#ff4d4d,#ffcc00);
-  font-family:sans-serif;
+  font-family: "Times New Roman", serif;
   text-align:center;
+  padding:40px;
+  background: linear-gradient(135deg,#ffe9b3,#ffd6d6,#fff6cc);
+  overflow:hidden;
 }
 
-.card{
-  background:white;
-  padding:50px;
-  border-radius:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
-  max-width:600px;
+/* hoa bay */
+.flower{
+  position:fixed;
+  top:-20px;
+  font-size:22px;
+  animation:fall linear infinite;
 }
 
-#wish{
-  font-size:28px;
+@keyframes fall{
+  to{
+    transform:translateY(110vh);
+  }
+}
+
+h1{
+  color:#b30000;
+  font-size:34px;
+  margin-bottom:30px;
+}
+
+#message{
+  font-size:26px;
+  color:#7a0000;
+  margin:30px 0;
+  min-height:60px;
   font-weight:bold;
-  margin-bottom:25px;
 }
 
 button{
-  padding:12px 28px;
-  font-size:18px;
+  background:#c40000;
+  color:white;
   border:none;
+  padding:14px 28px;
+  font-size:20px;
   border-radius:12px;
   cursor:pointer;
-  background:#ff4d4d;
-  color:white;
+}
+
+button:hover{
+  background:#a00000;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
-  <div id="wish">Bấm nút để nhận lộc đầu năm 🎉</div>
-  <button onclick="randomWish()">Nhận lộc ☠</button>
-</div>
+<h1>🌸 Chúc Mừng Năm Mới 🌸</h1>
 
-<script>
-const wishes = [
+<div id="message">Bấm nút để nhận câu chúc đầu năm</div>
 
-"🧧 Tiền vô ào ào như nước lũ",
-"💰 Ví tiền dày lên mỗi ngày",
-"🍀 Lộc xuân gõ cửa, may mắn cả năm",
-"🎉 Quét trúng câu này = đỏ cả năm ☠",
-"😆 Ăn ngon ngủ kỹ, stress bay màu",
-"🚀 Công việc thăng tiến vù vù",
-"🎁 Hôm nay có quà bất ngờ",
-"💵 Mở ví ra toàn tiền mới cứng",
-"🥳 Cười nhiều hơn, buồn ít lại",
-"🔥 Làm đâu thắng đó",
-"🎊 Gia đình bình an, sức khỏe max level",
-"🧨 Lì xì đầy túi, deadline biến mất",
-"🌸 Hoa nở – lộc tới – tiền tới",
-"😎 Aura đỏ chót, vận may bao quanh",
-"🍜 Ăn chơi thả ga vẫn dư tiền",
-"🎯 Mục tiêu nào cũng đạt",
-"💖 Tình yêu ngọt như mía lùi",
-"📈 Tài khoản tăng số liên tục",
-"🎇 Cả năm toàn tin vui",
-"💀 Nhận lộc thành công – chúc mừng Đế vương!"
-
-];
-
-function randomWish(){
-  const randomIndex = Math.floor(Math.random()*wishes.length);
-  document.getElementById("wish").innerText = wishes[randomIndex];
-}
-
-randomWish(); // tự hiện khi mở trang
-</script>
-
-</body>
-</html>
-
+<
