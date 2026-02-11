@@ -2,81 +2,182 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Chọn hướng câu chuyện</title>
+<title>Câu chuyện Tết</title>
 
 <style>
 body{
     margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
     font-family:"Times New Roman", serif;
-
-    background:
-        radial-gradient(circle at 20% 20%, #ffd6d6 0%, transparent 40%),
-        radial-gradient(circle at 80% 30%, #ffe9a8 0%, transparent 40%),
-        linear-gradient(135deg,#fff5e6,#ffe0e0,#fff0cc);
+    background: linear-gradient(#fff8e7,#ffe9c9);
+    text-align:center;
+    scroll-behavior:smooth;
 }
 
-.box{
-    text-align:center;
-    background:white;
-    padding:60px;
-    border-radius:25px;
-    box-shadow:0 0 30px rgba(0,0,0,0.15);
-    width:420px;
+/* tiêu đề */
+header{
+    padding:70px 20px;
 }
 
 h1{
     color:#b30000;
-    margin-bottom:40px;
-    font-size:30px;
+    font-size:38px;
 }
 
+/* nút */
 .btn{
-    display:block;
+    display:inline-block;
+    margin:20px;
+    padding:18px 45px;
+    font-size:20px;
+    border-radius:14px;
     text-decoration:none;
-    margin:20px 0;
-    padding:18px;
-    font-size:22px;
-    border-radius:15px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.fun{
-    background:#ffe066;
-    color:#5a3b00;
-}
-
-.meaning{
-    background:#ffb3b3;
-    color:#7a0000;
+    color:white;
+    background:#c62828;
+    transition:0.2s;
 }
 
 .btn:hover{
+    background:#8e0000;
     transform:scale(1.05);
-    box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* khung truyện */
+.story{
+    max-width:820px;
+    margin:120px auto;
+    padding:45px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+    text-align:left;
+    line-height:1.9;
+    font-size:19px;
+}
+
+.story h2{
+    text-align:center;
+    color:#b30000;
 }
 </style>
 </head>
 
+
+
 <body>
 
-<div class="box">
+<header>
+    <h1>🌸 Chọn hướng câu chuyện 🌸</h1>
 
-<h1>🌸 Chọn hướng bạn muốn 🌸</h1>
+    <!-- bấm là cuộn xuống -->
+    <a href="#haihuoc" class="btn">Câu chuyện hài hước</a>
+    <a href="#ynghia" class="btn">Câu chuyện ý nghĩa</a>
+</header>
 
-<a class="btn fun" href="haihuoc.html">
-😄 Câu chuyện hài hước
-</a>
 
-<a class="btn meaning" href="ynghia.html">
-🌿 Câu chuyện ý nghĩa
-</a>
 
-</div>
+<!-- ================= HÀI HƯỚC ================= -->
+<section id="haihuoc" class="story">
+
+<h2>😂 Chuyện vui ngày Tết</h2>
+
+<p>
+Sáng mùng Một, cu Tí được mẹ dặn đi chúc Tết họ hàng.
+Mẹ bảo: “Nói cho lễ phép thì mới được lì xì nhiều.”
+</p>
+
+<p>
+Tí sang nhà bác Hai:
+“Con chúc bác mạnh khỏe, tiền vô như nước!”
+→ Lì xì dày cộp.
+</p>
+
+<p>
+Nó khoái chí, đi thêm mấy nhà nữa.
+Phong bao đầy túi, bước đi nghe sột soạt.
+</p>
+
+<p>
+Đến nhà cô Ba, cô hỏi:
+“Thế năm nay học hành sao rồi con?”
+</p>
+
+<p>
+Tí thành thật:
+“Dạ… Toán 4 điểm…”
+</p>
+
+<p>
+Cô gật đầu:
+“Ừ, ráng năm sau nhé.”
+… rồi đóng cửa.
+</p>
+
+<p>
+Không lì xì.
+</p>
+
+<p>
+Tí đứng trước cửa 10 giây, thở dài:
+“Biết vậy nãy nói ‘dạ con được 10’ cho rồi…”
+</p>
+
+<p>
+Từ đó rút kinh nghiệm:
+Sáng mùng Một chỉ chúc Tết,
+<b>không trả lời phỏng vấn học lực.</b>
+</p>
+
+</section>
+
+
+
+<!-- ================= Ý NGHĨA ================= -->
+<section id="ynghia" class="story">
+
+<h2>🌿 Câu chuyện ý nghĩa ngày xuân</h2>
+
+<p>
+Chiều ba mươi, ba treo câu đối đỏ, mẹ lau bàn thờ,
+bà nội ngồi gói bánh chưng bên bếp lửa.
+</p>
+
+<p>
+Khói bếp bay lên thơm mùi lá dong, mùi nếp mới.
+Cả căn nhà ấm áp lạ thường.
+</p>
+
+<p>
+Tôi hỏi:
+“Bà ơi, sao năm nào cũng cực vậy?”
+</p>
+
+<p>
+Bà cười hiền:
+“Còn gói được bánh cho con cháu ăn Tết là còn vui.”
+</p>
+
+<p>
+Đêm giao thừa, cả nhà ngồi quây quần,
+không điện thoại, không vội vã,
+chỉ có tiếng cười và lời chúc.
+</p>
+
+<p>
+Lúc ấy tôi mới hiểu:
+</p>
+
+<p>
+<b>Tết không phải là tiền lì xì nhiều hay ít,  
+mà là còn đủ người thân ngồi cạnh nhau.</b>
+</p>
+
+<p>
+Chỉ cần vậy thôi, mùa xuân đã trọn vẹn rồi.
+</p>
+
+</section>
+
+
 
 </body>
 </html>
